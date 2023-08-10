@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="base_global_planner" default="navfn/NavfnROS"/>
+  <arg name="base_local_planner" default="base_local_planner/TrajectoryPlannerROS"/>
+  <arg name="global_costmap" default="global_costmap"/>
+  <arg name="local_costmap" default="local_costmap"/>
+  <arg name="odom_frame_id" default="odom"/>
+  <arg name="base_frame_id" default="base_link"/>
+
+  <!-- Load global costmap configuration -->
+  <param name="/$(arg global_costmap)/global_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+  <!-- Add more global costmap parameters as needed -->
+
+  <!-- Load local costmap configuration -->
+  <param name="/$(arg local_costmap)/local_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+  <!-- Add more local costmap parameters as needed -->
+
+  <!-- Load the move_base node -->
+  <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
+    <param name="base_global_planner" value="$(arg base_global_planner)"/>
+    <param name="base_local_planner" value="$(arg base_local_planner)"/>
+    <param name="global_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+    <param name="local_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+    <param name="odom_frame_id" value="$(arg odom_frame_id)"/>
+    <rosparam file="$(find bumpy_description)/config/move_base_params.yaml" command="load"/>
+    <!-- Add more move_base parameters as needed -->
+  </node>
+</launch>
+

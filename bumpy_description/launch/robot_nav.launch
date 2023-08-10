@@ -1,0 +1,20 @@
+<launch>
+
+  <!-- Launch the map server node to provide the map -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(bumpy_description)/map/map1.yaml" />
+
+  <!-- Launch the AMCL node for localization -->
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+    <!-- Load the initial pose estimate from the map -->
+    <param name="initial_pose_x" value="0.0"/>
+    <param name="initial_pose_y" value="0.0"/>
+    <param name="initial_pose_a" value="0.0"/>
+  </node>
+
+  <!-- Launch the move_base node for path planning and navigation -->
+  <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
+    <rosparam file="$(find bumpy_description)/config/move_base_params.yaml" command="load"/>
+  </node>
+
+</launch>
+

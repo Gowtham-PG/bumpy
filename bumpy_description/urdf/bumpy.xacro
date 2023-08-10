@@ -1,0 +1,544 @@
+<?xml version="1.0" ?>
+<robot name="bumpy" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find bumpy_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find bumpy_description)/urdf/bumpy.trans" />
+<xacro:include filename="$(find bumpy_description)/urdf/bumpy.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.005020150122786888 0.0006394317987033133 0.016160688670655576" rpy="0 0 0"/>
+    <mass value="0.13196884858595095"/>
+    <inertia ixx="0.000142" iyy="7.8e-05" izz="0.000219" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor1_1">
+  <inertial>
+    <origin xyz="-0.007999849877212972 2.999094846981021e-07 -0.004550736602734329" rpy="0 0 0"/>
+    <mass value="0.016913680348457787"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.01302 0.041359 -0.015161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/castor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.01302 0.041359 -0.015161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/castor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Castor_v1_1">
+  <inertial>
+    <origin xyz="0.00800015012278671 3.011613824502324e-07 -0.004550736602734461" rpy="0 0 0"/>
+    <mass value="0.016913680348457787"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00298 -0.042641 -0.015161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/Castor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00298 -0.042641 -0.015161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/Castor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j1_1">
+  <inertial>
+    <origin xyz="1.4967575224372753e-07 3.00014311116481e-07 0.019999688670655155" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02498 0.034359 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02498 0.034359 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j2_1">
+  <inertial>
+    <origin xyz="1.5056982179822986e-07 3.0001431151893687e-07 0.01999968867065573" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03502 0.034359 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03502 0.034359 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j3_1">
+  <inertial>
+    <origin xyz="1.5056982154842968e-07 3.0105739240449125e-07 0.01999968867065564" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03502 -0.035641 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03502 -0.035641 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j4_1">
+  <inertial>
+    <origin xyz="1.4967575191413007e-07 3.0105739196040204e-07 0.01999968867065512" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02498 -0.035641 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02498 -0.035641 -0.017161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middle_plate_1">
+  <inertial>
+    <origin xyz="-0.029455713152360674 0.03467972994117939 0.0009996886706552452" rpy="0 0 0"/>
+    <mass value="0.1564112211879933"/>
+    <inertia ixx="0.00013" iyy="0.000129" izz="0.000259" ixy="-2e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03502 0.034359 -0.057161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/middle_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03502 0.034359 -0.057161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/middle_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_plate_1">
+  <inertial>
+    <origin xyz="0.030159165906477957 -0.034399126332671524 0.0009996886639370567" rpy="0 0 0"/>
+    <mass value="0.14869189176611397"/>
+    <inertia ixx="0.000125" iyy="0.000129" izz="0.000255" ixy="3e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02498 -0.035641 -0.099161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/top_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02498 -0.035641 -0.099161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/top_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rasp_pi_v1_1">
+  <inertial>
+    <origin xyz="-0.02503888735258649 -0.004447661323638719 0.0049926779577120425" rpy="0 0 0"/>
+    <mass value="0.14743973867042878"/>
+    <inertia ixx="0.0001" iyy="4.3e-05" izz="0.000136" ixy="-1e-06" iyz="-1e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.029874 -0.03964 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/Rasp_pi_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.029874 -0.03964 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/Rasp_pi_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j7_1">
+  <inertial>
+    <origin xyz="1.5056982149291853e-07 3.0001431167159254e-07 0.019999688670655304" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03502 0.034359 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03502 0.034359 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j6_1">
+  <inertial>
+    <origin xyz="1.5056982136107955e-07 3.010573925710247e-07 0.019999688670655304" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03502 -0.035641 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03502 -0.035641 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j5_1">
+  <inertial>
+    <origin xyz="1.4967575182392445e-07 3.010573919950965e-07 0.0199996886706549" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02498 -0.035641 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02498 -0.035641 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="j8_1">
+  <inertial>
+    <origin xyz="1.4967575211882744e-07 3.0001431130383116e-07 0.019999688670654915" rpy="0 0 0"/>
+    <mass value="0.003945840372908612"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02498 0.034359 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02498 0.034359 -0.059161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/j8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_left_1">
+  <inertial>
+    <origin xyz="0.0191111631402495 0.005070653393270568 -0.010174742095541495" rpy="0 0 0"/>
+    <mass value="0.01081652208463691"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.005661 0.004379 -0.032321" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.005661 0.004379 -0.032321" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_right_1">
+  <inertial>
+    <origin xyz="-0.02039286289467567 0.004969947677596402 -0.010174742095541568" rpy="0 0 0"/>
+    <mass value="0.01081652208463691"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.005661 0.004379 -0.032321" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.005661 0.004379 -0.032321" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_v3__1__1">
+  <inertial>
+    <origin xyz="-0.008628963485632503 4.336328124550934e-07 -3.1215096472914095e-07" rpy="0 0 0"/>
+    <mass value="0.20533166812154216"/>
+    <inertia ixx="5.1e-05" iyy="3.1e-05" izz="3.1e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.03523 -0.000641 -0.022161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/wheel_v3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.03523 -0.000641 -0.022161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/wheel_v3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_v3_1">
+  <inertial>
+    <origin xyz="0.008629263731206642 1.6743805450231304e-07 -3.1215096454526026e-07" rpy="0 0 0"/>
+    <mass value="0.20533166812154216"/>
+    <inertia ixx="5.1e-05" iyy="3.1e-05" izz="3.1e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.04527 -0.000641 -0.022161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/wheel_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.04527 -0.000641 -0.022161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/wheel_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ydliar_X2_Bottom_v3_1">
+  <inertial>
+    <origin xyz="-0.018087969995984755 -0.01724386811130199 0.014919481072768484" rpy="0 0 0"/>
+    <mass value="0.032841802013098984"/>
+    <inertia ixx="2.5e-05" iyy="1e-05" izz="2.9e-05" ixy="-0.0" iyz="2e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.023051 -0.031922 -0.101161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/ydliar_X2_Bottom_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.023051 -0.031922 -0.101161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/ydliar_X2_Bottom_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ydliar_X2_top_v3_1">
+  <inertial>
+    <origin xyz="2.7291797662955253e-08 3.1633273486764146e-07 0.00799968867065412" rpy="0 0 0"/>
+    <mass value="0.3410355040901578"/>
+    <inertia ixx="8.1e-05" iyy="8.1e-05" izz="0.000147" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.004647 0.003578 -0.135161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/ydliar_X2_top_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.004647 0.003578 -0.135161" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://bumpy_description/meshes/ydliar_X2_top_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="0.01302 -0.041359 0.015161" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor1_1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="-0.00298 0.042641 0.015161" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Castor_v1_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="-0.02498 -0.034359 0.017161" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="j1_1"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="0.03502 -0.034359 0.017161" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="j2_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="0.03502 0.035641 0.017161" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="j3_1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="-0.02498 0.035641 0.017161" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="j4_1"/>
+</joint>
+
+<joint name="Rigid 11" type="fixed">
+  <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+  <parent link="j2_1"/>
+  <child link="middle_plate_1"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+  <parent link="j5_1"/>
+  <child link="top_plate_1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="-0.005146 0.073999 0.002" rpy="0 0 0"/>
+  <parent link="middle_plate_1"/>
+  <child link="Rasp_pi_v1_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="0.0 0.0 0.002" rpy="0 0 0"/>
+  <parent link="middle_plate_1"/>
+  <child link="j7_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="0.0 0.07 0.002" rpy="0 0 0"/>
+  <parent link="middle_plate_1"/>
+  <child link="j6_1"/>
+</joint>
+
+<joint name="Rigid 22" type="fixed">
+  <origin xyz="-0.06 0.07 0.002" rpy="0 0 0"/>
+  <parent link="middle_plate_1"/>
+  <child link="j5_1"/>
+</joint>
+
+<joint name="Rigid 23" type="fixed">
+  <origin xyz="-0.06 0.0 0.002" rpy="0 0 0"/>
+  <parent link="middle_plate_1"/>
+  <child link="j8_1"/>
+</joint>
+
+<joint name="Rigid 32" type="fixed">
+  <origin xyz="0.005661 -0.004379 0.032321" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_left_1"/>
+</joint>
+
+<joint name="Rigid 33" type="fixed">
+  <origin xyz="0.005661 -0.004379 0.032321" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_right_1"/>
+</joint>
+
+<joint name="joint_right" type="continuous">
+  <origin xyz="-0.040891 0.00502 -0.01016" rpy="0 0 0"/>
+  <parent link="motor_right_1"/>
+  <child link="wheel_v3__1__1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="joint_left" type="continuous">
+  <origin xyz="0.039609 0.00502 -0.01016" rpy="0 0 0"/>
+  <parent link="motor_left_1"/>
+  <child link="wheel_v3_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 40" type="fixed">
+  <origin xyz="0.048031 -0.003719 0.002" rpy="0 0 0"/>
+  <parent link="top_plate_1"/>
+  <child link="ydliar_X2_Bottom_v3_1"/>
+</joint>
+
+<joint name="joint_lidar" type="continuous">
+  <origin xyz="-0.018404 -0.0355 0.034" rpy="0 0 0"/>
+  <parent link="ydliar_X2_Bottom_v3_1"/>
+  <child link="ydliar_X2_top_v3_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+</robot>

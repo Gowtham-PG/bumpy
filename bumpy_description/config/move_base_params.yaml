@@ -1,0 +1,53 @@
+# Configuration for the move_base node
+
+# Global Planner Parameters
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 2.0
+  publish_frequency: 0.5
+  static_map: true
+
+# Local Planner Parameters
+local_costmap:
+  global_frame: odom
+  robot_base_frame: base_link
+  update_frequency: 5.0
+  publish_frequency: 2.0
+
+# The footprint of the robot in the local costmap
+local_costmap/inflation_layer:
+  inflation_radius: 0.2
+  
+# Change the footprint padding to increase the radius of the polygon
+local_costmap:
+  footprint_padding: 0.2
+
+# The footprint of the robot in the global costmap
+global_costmap/inflation_layer:
+  inflation_radius: 0.2
+  
+  # Change the footprint padding to increase the radius of the polygon
+global_costmap:
+  footprint_padding: 0.3
+
+# Base Controller Parameters
+base_controller:
+  type: "dwa_local_planner/DWAPlannerROS"
+  acc_lim_x: 2.5
+  acc_lim_y: 2.5
+  acc_lim_theta: 3.2
+  max_vel_x: 0.2
+  min_vel_x: 0.1
+  max_rotational_vel: 1.0
+  min_in_place_rotational_vel: 0.4
+  holonomic_robot: false
+  publish_cost_grid_pc: true
+
+# Recovery Behaviors Parameters
+recovery_behaviors:
+  enabled: true
+
+# Planner Frequency
+controller_frequency: 10.0
+

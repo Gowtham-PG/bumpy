@@ -1,0 +1,10 @@
+bumpy_description/
+  ├── config/
+  │    ├── move_base_params.yaml
+  ├── launch/
+  │    ├── amcl.launch
+  │    ├── move_base.launch
+  │    ├── navigation.launch
+  ├── map/
+  │    ├── map.pgm
+
